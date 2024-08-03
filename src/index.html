@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="./output.css" rel="stylesheet">
-
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="">
+<body>
   <header>
     <nav class="pt-4">
-        <ul class="flex flex-row justify-between p-4 items-center " >
+        <ul class="flex flex-row justify-between p-4 items-center" >
             <li class="">
                <img src="/src/Icons/insights_svg.svg " class="inline align-baseline"> <span class="font-bold font-sans text-[20px]">GitInsightX</span>
             </li>
@@ -41,39 +41,65 @@
             </div>
            <div class="flex items-center justify-center">
             <button class="flex border border-[#e4eaf3] text-[14px] font-sans text-[#a4d45c] rounded-md p-[5px] h-10 w-5/6 items-center justify-center">Review Us</button>
-
            </div>
             
     </div>
-      <!--The lower div of hamburger menu-->
+      <!-- The lower div of hamburger menu-->
       <div class="opacity-50 bg-black  w-screen h-screen" id="lower_bg">
         hey
-    </div>    
-        </div>   
-         
+        </div>    
+    </div>     
   </header>
 
   <!--Main section-->
-  <main>
+    <main class="flex flex-col justify-center items-center">
+
     <!--Hero section-->
-    <section class="mt-12 ">
-    <div class="pl-7 flex flex-col justify-center items-center p-5" id="hero_section" >
-        <h1 class="text-5xl font-bold md:w/2 text-center"> Curious about what your peers are upto in Github? </h1>
-       <div class="text-[#575470] mt-6 text-center w-6/3">
-        Enter their username and get detailed reports on their <span class="font-bold">project</span> and <span class="font-bold">activities</span>.
-       </div> 
-       <button class="bg-[rgb(228,244,158)] border border-white w-40 h-5 rounded-xl text-[10px] shadow-md hover:transition-all scale-105 mt-7">
-       Explore GitInsightX     
-      </button>
-        <div class="mt-6">   
-            <input type="text" class=" border border-gray-400 rounded-lg h-12 w-80 p-4 shadow-md" placeholder="Enter the github username"/>
-        </div>
-        <button class="bg-[#d9f855] w-44 h-10 rounded-md font-bold shadow-md hover:transition-all scale-105 mt-7">
-            Get Insights Now
+    <section class="mt-11">
+        <div class="pl-7 flex flex-col justify-center items-center p-5" id="hero_section" >
+            <h1 class="text-5xl font-bold md:w/2 text-center"> Curious about what your peers are upto in Github? </h1>
+        <div class="text-[#575470] mt-6 text-center w-6/3">
+            Enter their username and get detailed reports on their <span class="font-bold">project</span> and <span class="font-bold">activities</span>.
+        </div> 
+        <button class="bg-[rgb(228,244,158)] border border-white w-40 h-5 rounded-xl text-[10px] shadow-md hover:transition-all scale-105 mt-7">
+        Explore GitInsightX     
         </button>
-    </div>
-      
+            <div class="mt-6">   
+                <input type="text" class=" border border-gray-400 rounded-lg h-12 w-80 p-4 shadow-md" placeholder="Enter the github username"/>
+            </div>
+            <button class="bg-[#d9f855] w-44 h-10 rounded-md font-bold shadow-md hover:transition-all scale-105 mt-7">
+                Get Insights Now
+            </button>
+        </div> 
     </section>
+
+    <!--Photo section-->
+    <section class="mt-8">
+        <img src="/src/Icons/image.png" class="max-h-sm max-w-sm">
+    </section>
+
+    <!--How it works section-->
+   <section class="mt-10">
+     <div class="flex flex-col justify-center items-center">
+        <p class="text-2xl font-bold">HOW IT WORKS</p>
+        <div class="flex flex-col p-5 space-y-10 mt-6">
+            <div class="flex flex-col items-center justify-center relative">
+                <p class=" font-serif font-bold text-[200px] absolute inset-0 flex items-center justify-center text-gray-300 -z-10 mb-64">1</p>
+                <p class="font-bold" >Enter Github UserName</p>
+                <p class="text-center">Type in any github username to start the search.</p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <p class="font-bold" >Fetch User Data</p>
+                <p class="text-center">We fetch their data related to any github activity.</p>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <p class="font-bold" >See Insights</p>
+                <p class="text-center">Get instant insights into their contribution and projects.</p>
+            </div>
+        </div>
+     </div>
+   </section> 
+
   </main>
 
 

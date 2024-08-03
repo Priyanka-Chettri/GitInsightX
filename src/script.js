@@ -10,7 +10,7 @@ hamburger_button.addEventListener('click',(e)=>{
     console.log('Hamburger clicked ')
     if(toggle=='on'){
     menu.classList.remove('hidden')
-   // lower_bg.classList.remove('hidden')
+  //  lower_bg.classList.remove('hidden')
     toggle='off';
     }
     else if(toggle=='off'){
