@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Analytics Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body class="bg-white">
+    <header>
+        <nav class="pt-3 fixed top-0 w-full px-8 shadow-sm bg-white" id="navBar">
+            <ul class="flex flex-row justify-between p-4 items-center" >
+                <li class="">
+                   <img src="assets/Icons/insights_svg.svg " class="inline align-baseline"> <span class="font-bold font-sans text-[20px]">GitInsightX</span>
+                </li>
+                <li>
+                     <div class="flex justify-center items-center">
+                         <img src="assets/Icons/moon_svg.svg"  id="moon" class="hover:shadow-xl shadow-black hover:rounded-2xl hover:scale-105 transition-all p-2 hover:bg-gray-400">
+                     </div>
+                </li>         
+            </ul> 
+        </nav>
+    </header>
+   <main>
+    <section class="mt-100">
+        <div class="flex flex-col lg:flex-row" >
+            <!--div1-->
+            <div class="lg:fixed lg:top-[90px] p-5 w-full lg:w-auto">
+                <!--Top div-->
+                <div class="border p-5 rounded-lg flex flex-col justify-center items-center space-y-5 bg-[#d5ea81] ">
+                    <!--A div for profile photo-->
+                    <div>
+                       <img src="assets/Icons/profile-pic.png" class="mt-5 h-40 w-40 object-cover border border-gray-400 shadow-md rounded-full">
+                    </div>  
+                    <p class="w-max font-bold">Priyanka Chettri</p>  <!--Name of the searched user--> 
+                    <p class="text-center w-auto max-w-sm md:w-max md:max-w-60"> I am Engineer who loves to build things.I am Engineer who loves to build things.</p>   <!--Bio of the searched user--> 
+                    <!--Comapny name, Location etc-->
+                    <div class="flex flex-col space-y-2">
+                        <div class="flex flex-row space-x-2">
+                            <img src="assets/Icons/location_svg.svg">
+                            <p class="inline-block align-middle">Hyderabad</p>
+                        </div> 
+                        <div class="flex flex-row space-x-2">  
+                            <img src="assets/Icons/work_svg.svg">
+                            <p class="inline-block align-middle">ADP</p> 
+                        </div>  
+                    </div>     
+                </div>
+                <!--Bottom div-->
+                <div class="border p-5 rounded-lg bg-[#FEFAE0]">
+                    <canvas id="myPieChart" width="250" height="250"></canvas>
+                </div>
+            </div>
+            
+            <!--div2-->
+            <div class="p-5 space-y-3 lg:ml-[20%]  md:ml-[100%] mt-20 lg:-mr-5 w-full"> 
+                <div class=" border p-5 rounded-md flex justify-center items-center bg-[#d5ea81]">
+                    <p class="font-bold text-[50px]" >5 repos</p>
+                </div>
+                <div class=" border p-5 rounded-md bg-[#FEFAE0]">
+                    <canvas id="barChart" height="500" width="500"></canvas>
+                </div>
+                <div class="border  p-5 rounded-md bg-[#FEFAE0]">
+                    <canvas id="lineChart" height="500" width="500"></canvas>
+                </div>
+            </div>
+            <!--div 3-->
+            <div class="p-5 space-y-3 flex flex-col mt-20 lg:max-w-screen-lg w-full" >
+                <!--Top Div-->
+                <div class="border p-5 rounded-md bg-[#d5ea81] space-y-3">
+                    <p class="justify-center items-center flex font-bold text-[30px]">Top 10 Repos</p>
+                    <!--Scrollable div-->
+                    <div class="h-[700px] overflow-auto space-y-3">
+                        <!--Card div-->
+                        <div class="border rounded-lg flex flex-col p-4 space-y-5 bg-white">
+                            <div class="flex flex-row justify-between space-x-10 md:max-w-screen-md">
+                                <p class="font-bold">GitInsightX</p>
+                                <button class="bg-[rgb(228,244,158)] border border-white w-40 h-5 rounded-xl text-[10px] shadow-md hover:transition-all scale-105">
+                                    Link  
+                                </button>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ipsum velit pariatur repudiandae vel deleniti deserunt dolores laborum alias eum? Unde nemo sed doloribus, natus inventore hic explicabo accusamus numquam?</p>
+                            <div class="flex justify-between">
+                                <p class="font-bold">Fork <span>4</span></p>
+                                <button class="bg-[#000080] text-white font-bold border border-white w-20 h-5 rounded-xl text-[10px] shadow-md hover:transition-all scale-105">
+                                    CSS
+                                </button>
+                            </div>  
+                        </div>
+                        <div class="border rounded-lg flex flex-col p-4  space-y-5 bg-white">
+                            <div class="flex flex-row justify-between space-x-10 md:max-w-screen-md">
+                                <p class="font-bold">GitInsightX</p>
+                                <button class="bg-[rgb(228,244,158)] border border-white w-40 h-5 rounded-xl text-[10px] shadow-md hover:transition-all scale-105">
+                                    Link  
+                                </button>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ipsum velit pariatur repudiandae vel deleniti deserunt dolores laborum alias eum? Unde nemo sed doloribus, natus inventore hic explicabo accusamus numquam?</p>
+                            <div class="flex justify-between">
+                                <p class="font-bold">Fork <span>4</span></p>
+                                <button class="bg-[#000080] text-white font-bold border border-white w-20 h-5 rounded-xl text-[10px] shadow-md hover:transition-all scale-105">
+                                    CSS
+                                </button>
+                            </div>  
+                        </div>
+                        <div class="border rounded-lg flex flex-col p-4  space-y-5 bg-white">
+                            <div class="flex flex-row justify-between space-x-10 md:max-w-screen-md">
+                                <p class="font-bold">GitInsightX</p>
+                                <button class="bg-[rgb(228,244,158)] border border-white w-40 h-5 rounded-xl text-[10px] shadow-md hover:transition-all scale-105">
+                                    Link  
+                                </button>
+                            </div>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis ipsum velit pariatur repudiandae vel deleniti deserunt dolores laborum alias eum? Unde nemo sed doloribus, natus inventore hic explicabo accusamus numquam?</p>
+                            <div class="flex justify-between">
+                                <p class="font-bold">Fork <span>4</span></p>
+                                <button class="bg-[rgb(228,244,158)] border border-white w-40 h-5 rounded-xl text-[10px] shadow-md hover:transition-all scale-105">
+                                    CSS
+                                </button>
+                            </div>  
+                        </div>
+
+                    </div>
+                   
+                </div>
+                <!--Bottom Div-->
+                <div class="border rounded-md bg-[#d5ea81] p-4">
+                    <p class="text-center  font-bold">Made by Priyanka</p>
+                    <p class="text-center">Connect</p>
+                    <div class="flex items-center justify-center mt-6">
+                     <a href="https://www.linkedin.com/in/priyanka-chettri/" target="_blank"><img src="assets/Icons/linkedInsvg.svg"></a>
+                     <a href="https://x.com/Pryancawithan_i" target="_blank"><img src="assets/Icons/twitter_svg.svg"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   </main>
+    <script src="analytics.js">
+    </script>
+</body>
+</html>
+
+
+
+
+const dummyReceivedEventsData = {
+    labels: ['2024-08-05', '2024-08-06', '2024-08-07', '2024-08-08', '2024-08-09', '2024-08-10', '2024-08-11'], // Dates
+    datasets: [
+      {
+        label: 'PushEvent',
+        data: [5, 8, 3, 12, 7, 9, 6], // Number of PushEvent received each day
+        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        fill: true,
+        tension: 0.1
+      },
+      {
+        label: 'IssuesEvent',
+        data: [3, 5, 2, 6, 4, 7, 3], // Number of IssuesEvent received each day
+        borderColor: 'rgba(153, 102, 255, 1)',
+        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+        fill: true,
+        tension: 0.1
+      },
+      {
+        label: 'PullRequestEvent',
+        data: [2, 4, 1, 5, 2, 3, 4], // Number of PullRequestEvent received each day
+        borderColor: 'rgba(255, 159, 64, 1)',
+        backgroundColor: 'rgba(255, 159, 64, 0.2)',
+        fill: true,
+        tension: 0.1
+      },
+      {
+        label: 'CreateEvent',
+        data: [1, 2, 3, 1, 2, 3, 2], // Number of CreateEvent received each day
+        borderColor: 'rgba(255, 99, 132, 1)',
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        fill: true,
+        tension: 0.1
+      }
+    ]
+  };
